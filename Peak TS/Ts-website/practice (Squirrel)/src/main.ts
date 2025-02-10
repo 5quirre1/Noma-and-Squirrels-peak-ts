@@ -1,4 +1,4 @@
-// the textbar ts greg
+ // the textbar ts greg
 function textbar() {
     const g = document.getElementById('swag') as HTMLTextAreaElement;
 const d = document.getElementById('g') as HTMLButtonElement;
@@ -36,6 +36,20 @@ function click() {
       localStorage.setItem("clickedTimes", clickedTimes.toString());
     });
   }
+
+  // random words
+  async function randword() {
+    const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+   let g: string[] = new Array("greg", "wow", "skibidi", "names is gay");
+    const random = Math.floor(Math.random() * g.length);
+    const greg: string = g[random];
+    const swag = document.getElementById('ran');
+    swag.innerText = greg;
+    console.log(greg);
+    await sleep(2000);
+    randword();
+  }
   
+  randword();
   textbar();
   click();
