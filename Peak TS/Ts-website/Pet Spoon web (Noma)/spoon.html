@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Spoon Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            border: none;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="clicks">Pet Spoon</h1>
+        <img src="img/spoon.png" alt="spoon" height="100" width="100">
+        <p id="info">Health: 100 | Hunger: 100 | XP : 100 | Level : 999</p>
+        <br>
+        <button id="feed">Feed</button>
+        <div id="feedwhat">
+            <h2>Feed Pet Spoon</h2>
+            <button id="pizza">Pizza</button>
+            <button id="donut">Donut</button>
+            <p id="no">You have 0 of this food left.</p>
+        </div>
+    </div>
+</div>
+
+    <div id="diedcontainer">
+        <h1 id="died">Pet Spoon Died</h1>
+        <br>
+        <button id="again">Play again</button>
+    </div>
+<script type="module" src="src/game.js"></script>
+</body>
+
+</html>
