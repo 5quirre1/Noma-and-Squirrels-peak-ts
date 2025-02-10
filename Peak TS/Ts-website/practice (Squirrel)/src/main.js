@@ -1,39 +1,52 @@
-// the textbar ts greg
+// the textbar js greg
 function textbar() {
-    var g = document.getElementById('swag');
-    var d = document.getElementById('g');
-    var message = document.getElementById("message");
-    d.addEventListener('click', function () {
-        var swag = g.value;
+    const g = document.getElementById('swag');
+    const d = document.getElementById('g');
+    const message = document.getElementById("message");
+    d.addEventListener('click', () => {
+        const swag = g.value;
         if (swag == "greg") {
             message.innerText = "wow so peak";
-        }
-        else if (swag == "swag") {
+        } else if (swag == "swag") {
             message.innerText = "so swag fr";
-        }
-        else {
+        } else {
             message.innerText = swag;
         }
     });
 }
-;
+
 // click
 function click() {
-    var click = document.getElementById('click');
-    var clicked = document.getElementById('clicked');
-    var clickedTimes = parseInt(localStorage.getItem("clickedTimes") || "0");
+    const click = document.getElementById('click');
+    const clicked = document.getElementById('clicked');
+    let clickedTimes = parseInt(localStorage.getItem("clickedTimes") || "0");
     clicked.style.cssText = "color: white;";
     if (clickedTimes) {
-        clicked.innerText = "clicked: ".concat(clickedTimes);
-    }
-    else {
+        clicked.innerText = `clicked: ${clickedTimes}`;
+    } else {
         clicked.innerText = "click greg";
     }
-    click.addEventListener('click', function () {
+    click.addEventListener('click', () => {
         clickedTimes++;
-        clicked.innerText = "clicked: ".concat(clickedTimes);
+        clicked.innerText = `clicked: ${clickedTimes}`;
         localStorage.setItem("clickedTimes", clickedTimes.toString());
     });
 }
+
+// random words
+async function randword() {
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    let g = ["greg", "wow", "skibidi", "names is gay"];
+    const random = Math.floor(Math.random() * g.length);
+    const greg = g[random];
+    const swag = document.getElementById('ran');
+    swag.innerText = greg;
+    console.log(greg);
+    await sleep(2000);
+    randword();
+}
+
+randword();
 textbar();
 click();
+
