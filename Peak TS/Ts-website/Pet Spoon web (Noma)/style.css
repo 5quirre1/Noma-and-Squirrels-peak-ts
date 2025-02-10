@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  animation: popIn .5s ease-in-out;
+}
+
+body {
+    background-color: #FFCCE5;
+    margin: 0;
+    height: 360px;
+    width: 220px;
+    padding: 30px;
+
+}
+
+#no {
+    display: none;
+}
+
+
+#diedcontainer {
+    display: none;
+    animation: popIn .5s ease-in-out;
+}
+
+#feed {
+    animation: popIn .5s ease-in-out;
+}
+
+#feedwhat {
+    display: none;
+    padding-top: 5px;
+    animation: popIn .5s ease-in-out;
+}
+
+button {
+    border: none;
+    background-color: #FF77A9;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+button:hover {
+    box-shadow: 0px 0px 10px #ff3bb4;
+    transform: scale(1.1);
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.auth-container {
+    display: block;
+}
